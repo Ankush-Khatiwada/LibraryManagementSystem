@@ -16,6 +16,68 @@
     <title>LibraryManagementSystem</title>
     <style media="screen">
 
+        html {
+  box-sizing: border-box;
+}
+        .row{
+            left: 10%;
+
+            margin-left: 20%;
+        }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: right;
+  width: 13%;
+  margin-bottom: 16px;
+  padding: 10px 8px;
+
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 10px 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
     .jumbotron{
       margin-top: 0px;
       margin-bottom: 0px;
@@ -36,51 +98,83 @@
 
     {% include "library/navbar.html" %}
 <br><br>
-<center><h3 class = 'alert alert-success'>About Us !</h3></center>
+
     <div class="jumbotron">
-  <h1 class="display-4">Hello, Reader!</h1>
-  <p class="lead">A service dedicated to Admin and Student. We provide online resources, professional support
-    and guidance to all our students whenever, and from wherever they have chosen to study.</p>
+  <h1 class="display-4"></h1>
+  <p class="lead">The library management system is a software to manage manual functions of a library. The software helps to manage the entire library operations from maintaining book records to issue a book.</p>
   <hr class="my-4">
   
-  <p>Explore our Website.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
-  </p>
+
+
 </div>
-<!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
-  <h2>OUR TEAM</h2>
-  
-  
-  <div class="w3-row"><br>
-  
-  <div class="w3-quarter">
-    
-    <h3>Ankush Khatiwada </h3>
-    <p>Web Developer</p>
+<h2 style="margin-left: 50%">Meet The Team  </h2>
+
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static "images/jeshmi.jpg" %}" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jeshmi Rajak</h2>
+        <p class="title">Project Manager</p>
+
+
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
   </div>
-  
-  <div class="w3-quarter">
-   
-    <h3>Jeshmi Rajak </h3>
-    <p>Project Manager</p>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "images/Kriti.jpg" %}" alt="Mike" style="height:100%">
+      <div class="container">
+        <h2>Kriti Shrestha</h2>
+        <p class="title">Business Analyst </p>
+<br>
+          <br>
+          <br>
+
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
   </div>
-  
-  <div class="w3-quarter">
-    
-    <h3>Kriti Shrestha</h3>
-    <p>Business Analyst</p>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static "images/ankush.jpg" %}" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Ankush Khatiwada</h2>
+        <p class="title">Developer</p>
+
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
   </div>
-  
-  <div class="w3-quarter">
-    
-    <h3>Shiv Kumar YAdav</h3>
-    <p>FrontEnd Developer</p>
+    <div class="column">
+    <div class="card">
+      <img src="{% static "images/Shiv.jpg" %}"alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Shiv Kumar Yadav</h2>
+        <p class="title">Developer</p>
+
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
   </div>
-  
+    <div class="column">
+    <div class="card">
+      <img src="{% static "images/Bhuwan.jpg" %}"alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Bhuwan Pandit</h2>
+        <p class="title">Developer</p>
+
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
   </div>
-  </div>
+</div>
+
 
 
     {% include "library/footer.html" %}
